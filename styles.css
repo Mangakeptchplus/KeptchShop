@@ -9,8 +9,15 @@ body {
 }
 
 header {
-    background-color: #333;
-    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #222; /* สีดำ */
+    padding: 10px 20px;
+}
+
+/* โลโก้กับชื่อร้านอยู่ติดกัน */
+.logo-container {
     display: flex;
     align-items: center;
 }
@@ -18,6 +25,13 @@ header {
 .logo {
     max-width: 30px;
     margin-left: 10px;
+}
+
+.shop-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 15px; /* เดิม 10px -> ขยายเป็น 15px หรือมากกว่านั้น */
+    margin-right: 40px; /* เพิ่มระยะห่างระหว่างชื่อร้านกับปุ่มย้อนกลับ */
 }
 
 .carousel {
@@ -133,4 +147,147 @@ html, body {
     0%, 33% { transform: translateX(0); }
     34%, 66% { transform: translateX(-100%); }
     67%, 100% { transform: translateX(-200%); }
+}
+
+.back-button {
+    color: white;
+    background-color: #333; /* สีเทาเข้ม */
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    margin-left: auto; /* ให้ปุ่มชิดขวาสุด */
+}
+
+.back-button:hover {
+    background-color: #444; /* สีเทาอ่อนขึ้น */
+    transform: scale(1.05);
+}
+
+/* ---- ตั้งค่าพื้นหลังหน้าท็อปอัพ ---- */
+.topup-bg {
+    background: url('img/your-background-image.jpg') no-repeat center center/cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---- สไตล์หัวข้อ ---- */
+.topup-title {
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.8);
+    margin-bottom: 20px;
+}
+
+/* ปรับขนาดกล่อง topup-options ให้ใหญ่ขึ้น */
+.topup-options {
+    display: flex;
+    gap: 30px; /* เพิ่มระยะห่างระหว่างการ์ด */
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 800px; /* จำกัดความกว้างสูงสุด */
+}
+
+/* ปรับขนาดของ topup-card ให้ใหญ่ขึ้น */
+.topup-card {
+    background: rgba(20, 20, 20, 0.9);
+    color: white;
+    padding: 30px; /* เพิ่ม padding */
+    border-radius: 15px;
+    width: 300px; /* ขยายความกว้าง */
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease;
+}
+
+.topup-card img {
+    width: 80px;
+    margin-bottom: 10px;
+}
+
+/* ---- ปุ่มสีเขียว "สามารถเติมได้" ---- */
+.topup-btn {
+    background: #0f9938;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topup-btn:hover {
+    background: #0c7a2d;
+}
+
+/* ทำให้การ์ดขยายขึ้นเมื่อโฮเวอร์ */
+.topup-card:hover {
+    transform: scale(1.1);
+}
+
+/* ขยายขนาดรูปภาพในการ์ด */
+.topup-card img {
+    width: 300px; /* ขยายขนาดรูป */
+    margin-bottom: 15px;
+}
+
+/* จัดตำแหน่ง topup-card-container */
+.topup-card-container {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    color: white;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+    
+    /* ปรับระยะห่างจาก header */
+    margin-top: 80px; /* ปรับค่าได้ */
+    
+    /* จัดให้ทุกอย่างอยู่ตรงกลาง */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.topup-header {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.topup-card h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.topup-card p {
+    margin: 5px 0;
+}
+
+.topup-card input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #444;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0;
+}
+
+/* ข้อความเล็ก */
+.small-text {
+    font-size: 12px;
+    opacity: 0.8;
 }
