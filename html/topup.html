@@ -1,17 +1,33 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="th">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Topup</title>
+    <title>Topup Selection</title>
     <link rel="stylesheet" href="../styles.css">
 </head>
-<body>
+<body class="topup-bg">
     <header>
-        <img src="../img/logo.png" alt="Logo" class="logo">
+        <div class="logo-container">
+            <img src="../img/logo.png" alt="Logo" class="logo">
+            <span class="shop-name">KeptchShop</span>
+        </div>
+        <a href="../index.html" class="back-button">← ย้อนกลับ</a>
     </header>
 
-    <!-- เนื้อหาที่คุณต้องการเพิ่มเติมที่นี่ -->
-    
+    <div class="topup-container">
+        <h2 class="topup-title">เลือกช่องทางการเติมเงิน</h2>
+
+        <div class="topup-options">
+            <div class="topup-card">
+                <img src="../img/truemoney.png" alt="Truemoney Wallet">
+                <h3>Truemoney Wallet (อังเปา)</h3>
+                <button class="topup-btn" onclick="location.href='TruemoneyWallet.html'">
+                    ✅ สามารถใช้งานได้
+                </button>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
